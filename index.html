@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="keywords" content="東京、ラーメン、旅行、池袋、女性" />
+    <meta
+      name="description"
+      content="私が今まで食べてきたラーメンを記録したサイトです。"
+    />
+    <title>ラーメンのきろく</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAB08ryxe8bzbK8v_e_OMXqF4VngRTjJnw"></script>
+    <script>
+      google.maps.event.addDomListener(window, "load", init);
+
+      function init() {
+        /*mapの中心を池袋駅に指定*/
+        let latlng = new google.maps.LatLng(35.72979, 139.710889);
+        let myOptions = {
+          zoom: 13,
+          center: latlng,
+          mapTypeId: google.maps.MapTypeId.ROADMAP,
+          mapTypeContorol: false,
+          scaleControl: false,
+          streetViewControl: false,
+          scrollwheel: false
+        };
+        let map = new google.maps.Map(
+          document.getElementById("map"),
+          myOptions
+        );
+      }
+    </script>
+  </head>
+  <body onload="init();">
+    <header>
+      <div class="contentWrapper"><h1>ラーメンのきろく</h1></div>
+    </header>
+    <section id="aboutus">
+      <!-- About us -->
+      <div class="contentWrapper">
+        <h2>ラーメンログ</h2>
+        <p>私が食べたラーメンの記録です。</p>
+      </div>
+    </section>
+    <section id="gallery">
+      <!-- Gallery -->
+      <ul class="flex">
+        <li><img src="img/img1.jpg" /></li>
+        <li><img src="img/img2.jpg" /></li>
+        <li><img src="img/img3.jpg" /></li>
+        <li><img src="img/img4.jpg" /></li>
+        <li><img src="img/img5.jpg" /></li>
+        <li><img src="img/img6.jpg" /></li>
+        <li><img src="img/img7.jpg" /></li>
+        <li><img src="img/img8.jpg" /></li>
+        <li><img src="img/img9.jpg" /></li>
+      </ul>
+    </section>
+    <section id="topics">
+      <div class="contentWrapper">
+        <!-- Topics -->
+        <!-- 店名がわかり次第変更 -->
+        <h2>ラーメン一覧</h2>
+        <div class="flex">
+          <div class="flexcontent">
+            <figure>
+              <img src="img/img1.jpg" />
+              <figcaption>銀座 篝(かがり)</figcaption>
+            </figure>
+          </div>
+
+          <div class="flexcontent">
+            <figure>
+              <img src="img/img2.jpg" />
+              <figcaption>自家製麺 鶏八朗</figcaption>
+            </figure>
+          </div>
+
+          <div class="flexcontent">
+            <figure>
+              <img src="img/img3.jpg" />
+              <figcaption>ばんから</figcaption>
+            </figure>
+          </div>
+          <div class="flexcontent">
+            <figure>
+              <img src="img/img4.jpg" />
+              <figcaption>柳家</figcaption>
+            </figure>
+          </div>
+
+          <div class="flexcontent">
+            <figure>
+              <img src="img/img5.jpg" />
+              <figcaption>麺処 花田</figcaption>
+            </figure>
+          </div>
+
+          <div class="flexcontent">
+            <figure>
+              <img src="img/img6.jpg" />
+              <figcaption>麺処 ほん田</figcaption>
+            </figure>
+          </div>
+
+          <div class="flexcontent">
+            <figure>
+              <img src="img/img7.jpg" />
+              <figcaption>雨ニモマケズ</figcaption>
+            </figure>
+          </div>
+
+          <div class="flexcontent">
+            <figure>
+              <img src="img/img8.jpg" />
+              <figcaption>無敵家</figcaption>
+            </figure>
+          </div>
+          <div class="flexcontent">
+            <figure>
+              <img src="img/img9.jpg" />
+              <figcaption>鶏そば 寿</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="access">
+      <div class="contentWrapper"><h2>ACCESS</h2></div>
+      <div id="map" style="width: 100%;height: 500px;"></div>
+    </section>
+    <footer>
+      <!-- フッター上部 -->
+      <div id="upperFooter">
+        <div class="contentWrapper"><h3>ラーメンのきろく</h3></div>
+      </div>
+      <!-- フッタークレジット表記 -->
+      <div id="bottomFooter"><small>avelog95</small></div>
+    </footer>
+  </body>
+</html>
